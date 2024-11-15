@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riwayat Transaksi</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: white; }
+        .container { width: 90%; margin: 20px auto; }
+        .header { background-color: teal; color: white; text-align: center; padding: 10px; }
+        ul { list-style-type: none; padding: 0; }
+        li { padding: 10px; border-bottom: 1px solid #ddd; }
+        button { background-color: teal; color: white; padding: 10px; border: none; cursor: pointer; margin-top: 20px; }
+        button:hover { background-color: white; color: teal; border: 2px solid teal; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Riwayat Transaksi</h1>
+    </div>
+
+    <div class="container">
+        <ul>
+            %TRANSACTIONS%
+        </ul>
+
+        <button onclick="window.location.href='mutt.html'">Kembali ke Beranda</button>
+    </div>
+</body>
+</html>

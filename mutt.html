@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Water Dispenser</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: white; }
+        .container { width: 90%; margin: 20px auto; }
+        .header { background-color: teal; color: white; text-align: center; padding: 10px; }
+        .grid-container { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
+        .card { border: 2px solid #444; text-align: center; padding: 20px; }
+        button { background-color: teal; color: white; padding: 10px; border: none; cursor: pointer; }
+        button:hover { background-color: white; color: teal; border: 2px solid teal; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Smart Canteen</h1>
+        <h2>by METATECH_9</h2>
+    </div>
+
+    <div class="container">
+        <div class="grid-container">
+            <div class="card">
+                <img src="air-200ml.jpg" alt="200ml" width="100%">
+                <p>200ml</p>
+                <button onclick="buy('200ml')">Beli</button>
+            </div>
+            <div class="card">
+                <img src="air-330ml.jpg" alt="330ml" width="100%">
+                <p>330ml</p>
+                <button onclick="buy('330ml')">Beli</button>
+            </div>
+            <div class="card">
+                <img src="air-600ml.jpg" alt="600ml" width="100%">
+                <p>600ml</p>
+                <button onclick="buy('600ml')">Beli</button>
+            </div>
+            <div class="card">
+                <img src="air-750ml.jpg" alt="750ml" width="100%">
+                <p>750ml</p>
+                <button onclick="buy('750ml')">Beli</button>
+            </div>
+            <div class="card">
+                <img src="air-1000ml.jpg" alt="1000ml" width="100%">
+                <p>1000ml</p>
+                <button onclick="buy('1000ml')">Beli</button>
+            </div>
+            <div class="card">
+                <img src="air-1500ml.jpg" alt="1500ml" width="100%">
+                <p>1500ml</p>
+                <button onclick="buy('1500ml')">Beli</button>
+            </div>
+        </div>
+
+        <div style="margin-top: 20px; text-align: center;">
+            <button onclick="window.location.href='cill.html'">Lihat Riwayat Transaksi</button>
+        </div>
+    </div>
+
+    <script>
+        function buy(size) {
+            fetch('/buy?size=' + size)
+                .then(response => response.text())
+                .then(data => alert("Pembelian " + size + " berhasil"));
+        }
+    </script>
+</body>
+</html>
